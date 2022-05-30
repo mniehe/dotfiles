@@ -31,7 +31,21 @@ source "${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #####
+# Load env files
+#####
+[[ ! -f ~/.zshenv ]] || source ~/.zshenv
+
+#####
+# Load aliases
+#####
+[[ ! -f ~/.zaliases ]] || source ~/.zaliases
+
+#####
 # Load laptop/company/org specific secrets
 #####
 [[ ! -f ~/.zsecrets ]] || source ~/.zsecrets
 
+#####
+# Init pyenv
+#####
+eval "$(pyenv init -)"

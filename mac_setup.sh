@@ -27,7 +27,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 # Individual Tool Install
 # Use the tools installed in the above steps to install required tools
 #####
-brew install bat broot jq fzf direnv
+brew install bat broot jq fzf direnv pyenv
 brew cask install iterm2
 
 #####
