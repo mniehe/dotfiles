@@ -1,4 +1,9 @@
 
+####
+# Add scripts folder to path
+####
+[[ ! -f ~/scripts ]] export PATH=$PATH:$HOME/scripts
+
 #####
 # Load NVM
 #####
@@ -17,7 +22,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 source "${HOME}/.config/broot/launcher/bash/br"
 
 #####
-# Load direnv hook\
+# Load direnv hook
 # Website: https://direnv.net/
 #####
 eval "$(direnv hook zsh)"
