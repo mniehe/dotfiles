@@ -2,7 +2,7 @@
 ####
 # Add scripts folder to path
 ####
-[[ ! -f ~/scripts ]] export PATH=$PATH:$HOME/scripts
+[[ ! -f ~/scripts ]] || export PATH=$PATH:$HOME/scripts
 
 #####
 # Load NVM
