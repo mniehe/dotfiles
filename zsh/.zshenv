@@ -3,7 +3,7 @@
 ####
 export HOMEBREW_NO_ENV_HINTS=1
 
-export NODE_ENV=dev
+export NODE_ENV=local
 export DEV_DIR=$HOME/dev/src
 export ZSH_CUSTOM=$DEV_DIR/github.com/mniehe/dotfiles/zsh
 
