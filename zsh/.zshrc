@@ -36,6 +36,20 @@ source "${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #####
+# Setup history
+#####
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_SAVE_NO_DUPS         # do not save duplicated command
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+alias history="fc -l 1`
+
+#####
 # Load env files
 #####
 [[ ! -f ~/.zshenv ]] || source ~/.zshenv
