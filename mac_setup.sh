@@ -37,4 +37,5 @@ ln -si $(pwd)/zsh/.zshrc $HOME/.zshrc && \
   ln -si $(pwd)/zsh/.zshenv $HOME/.zshenv && \
   ln -si $(pwd)/zsh/.zaliases $HOME/.zaliases && \
   ln -si $(pwd)/zsh/.p10k.zsh $HOME/.p10k.zsh && \
-  ln -si $(pwd)/macos/scripts $HOME/scripts
+  ln -si $(pwd)/macos/scripts $HOME/scripts && \
+  ln -si $(pwd)/kitty $HOME/.config/kitty
