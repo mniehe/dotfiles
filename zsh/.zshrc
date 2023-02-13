@@ -1,5 +1,11 @@
 
 ####
+# Setup homebrew in path
+####
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+
+####
 # Add scripts folder to path
 ####
 [[ ! -f ~/scripts ]] && export PATH=$PATH:$HOME/scripts
@@ -47,7 +53,7 @@ setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_SAVE_NO_DUPS         # do not save duplicated command
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-alias history="fc -l 1`
+alias history="fc -l 1"
 
 #####
 # Load env files
@@ -68,3 +74,9 @@ alias history="fc -l 1`
 # Init pyenv
 #####
 eval "$(pyenv init -)"
+
+#####
+# Fix issue with VS Code not working from the command line
+# https://stackoverflow.com/questions/29963617/how-to-call-vs-code-editor-from-terminal-command-line/33831403#33831403
+#####
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
